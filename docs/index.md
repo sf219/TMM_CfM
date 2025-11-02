@@ -1,7 +1,17 @@
 ---
-title: Image Coding for Machines via Feature-Preserving Rate-Distortion Optimization
-description: “We propose a method for image coding that optimizes for machine-based analysis by preserving task-relevant features via a modified RDO framework.”
+layout: default
+title: Image Coding for Machines via Feature-Preserving RDO
+description: “We propose a method for image coding that compresses images while preserving performance in computer vision methods by preserving task-relevant features via a modified rate-distortion optimization framework.”
 ---
+
+<div align="center">
+
+# TMM_CfM  
+**Image Coding for Machines via Feature-Preserving Rate-Distortion Optimization**  
+[Samuel Fernández-Menduiña](mailto:sf219@usc.edu) · Eduardo Pavez · Antonio Ortega  
+[arXiv:2504.02216](https://arxiv.org/abs/2504.02216)
+
+</div>
 
 # Image Coding for Machines via Feature-Preserving Rate-Distortion Optimization  
 **Samuel Fernández-Menduiña, Eduardo Pavez, Antonio Ortega**  

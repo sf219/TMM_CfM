@@ -7,16 +7,18 @@ markdown: kramdown
 baseurl: "/TMM_CfM"
 url: "https://sf219.github.io"
 
-# Navigation
+# Navigation bar (top of page)
 navigation:
   - title: Home
     url: /
+  - title: Paper
+    url: /paper/
   - title: Notebooks
     url: /notebooks/
   - title: GitHub
     url: https://github.com/sf219/TMM_CfM
 
-# Build settings
+# Plugins for relative linking and markdown notebooks
 plugins:
   - jekyll-relative-links
 
@@ -24,6 +26,9 @@ relative_links:
   enabled: true
   collections: true
 
-# Include notebook files
+# Allow rendering of Jupyter notebooks and local markdown
 include:
   - _*.ipynb
+  - _*.md
+  - notebooks/
+  - paper/

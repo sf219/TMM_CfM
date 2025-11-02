@@ -1,4 +1,4 @@
-# TMM_CfM: Transfer Matrix Method for Coding for Machines
+# Image Coding for Machines via Feature-Preserving Rate-Distortion Optimization
 
 Welcome to the TMM_CfM project documentation! This project explores the application of the Transfer Matrix Method (TMM) in the context of coding for machines.
 

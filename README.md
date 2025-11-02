@@ -50,8 +50,8 @@ TMM_CfM/
 git clone https://github.com/sf219/TMM_CfM.git
 cd TMM_CfM
 
-# Install dependencies (if applicable)
-pip install -r requirements.txt
+# Install dependencies for running examples
+pip install numpy scipy matplotlib scikit-learn
 ```
 
 ## 🤝 Contributing

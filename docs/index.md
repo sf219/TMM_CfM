@@ -29,8 +29,8 @@ To get started with TMM_CfM, check out our interactive Colab notebooks:
 git clone https://github.com/sf219/TMM_CfM.git
 cd TMM_CfM
 
-# Install dependencies (if applicable)
-pip install -r requirements.txt
+# Install dependencies for running examples
+pip install numpy scipy matplotlib scikit-learn
 ```
 
 ## Documentation

@@ -1,0 +1,29 @@
+title: TMM_CfM
+description: Transfer Matrix Method for Coding for Machines
+theme: jekyll-theme-cayman
+markdown: kramdown
+
+# GitHub Pages configuration
+baseurl: "/TMM_CfM"
+url: "https://sf219.github.io"
+
+# Navigation
+navigation:
+  - title: Home
+    url: /
+  - title: Notebooks
+    url: /notebooks/
+  - title: GitHub
+    url: https://github.com/sf219/TMM_CfM
+
+# Build settings
+plugins:
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: true
+
+# Include notebook files
+include:
+  - _*.ipynb

@@ -1,6 +1,6 @@
 title: TMM_CfM
 description: Transfer Matrix Method for Coding for Machines
-theme: minimal-mistakes-jekyll
+theme: jekyll-theme-cayman
 
 url: "https://sf219.github.io"
 baseurl: "/TMM_CfM"

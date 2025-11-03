@@ -247,22 +247,47 @@
   </div>
 </section>
 
-<!-- Paper abstract -->
+<!-- Paper summary -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+
+        <!-- Always visible "At a Glance" summary -->
+        <h2 class="title is-3">At a Glance</h2>
         <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
           <p>
-            Many images and videos are primarily processed by computer vision algorithms, involving only occasional hu- man inspection. When this content requires compression before processing, e.g., in distributed applications, coding methods must optimize for both visual quality and downstream task performance. We first show theoretically that an approach to reduce the effect of compression for a given task loss is to perform rate-distortion optimization (RDO) using the distance between features, obtained from the original and the decoded images, as a distortion metric. However, optimizing directly such a rate- distortion objective is computationally impractical because it requires iteratively encoding and decoding the entire image–plus feature evaluation–for each possible coding configuration. We address this problem by simplifying the RDO formulation to make the distortion term computable using block-based encoders. We first apply Taylor’s expansion to the feature extractor, recasting the feature distance as a quadratic metric involving the Jacobian matrix of the neural network. Then, we replace the linearized metric with a block-wise approximation, which we call input-dependent squared error (IDSE). To make the metric computable, we approximate IDSE using sketches of the Jacobian. The resulting loss can be evaluated block-wise in the transform domain and combined with the sum of squared errors (SSE) to address both visual quality and computer vision performance. Simulations with AVC and HEVC across multiple feature extractors and downstream networks show up to 17% bit-rate savings for the same task accuracy compared to RDO based on SSE, with no decoder complexity overhead and a small (7.86%) encoder complexity increase.          </p>
+            Many images and videos today are primarily processed by computer vision algorithms, with humans inspecting only occasionally. 
+            Feature-preserving RDO provides a method to compress such content efficiently while preserving the features that downstream vision models rely on.
+          </p>
         </div>
+
+        <!-- Toggle button for full abstract -->
+        <button class="button is-link" id="abstract-toggle">
+          Show / Hide Full Abstract
+        </button>
+
+        <!-- Hidden full abstract -->
+        <div class="content has-text-justified" id="abstract-content" style="display:none; margin-top: 1em;">
+          <p>
+                        Many images and videos today are primarily processed by computer vision algorithms, with humans inspecting only occasionally. When this content requires compression before processing, e.g., in distributed applications, coding methods must optimize for both visual quality and downstream task performance. We first show theoretically that an approach to reduce the effect of compression for a given task loss is to perform rate-distortion optimization (RDO) using the distance between features, obtained from the original and the decoded images, as a distortion metric. Optimizing directly such a rate-distortion objective is computationally impractical because it requires iteratively encoding and decoding the entire image plus feature evaluation for each possible coding configuration. We address this problem by simplifying the RDO formulation to make the distortion term computable using block-based encoders. We apply Taylor’s expansion to the feature extractor, recasting the feature distance as a quadratic metric involving the Jacobian matrix of the neural network. Then, we replace the linearized metric with a block-wise approximation, called input-dependent squared error (IDSE). To make the metric computable, we approximate IDSE using sketches of the Jacobian. The resulting loss can be evaluated block-wise in the transform domain and combined with the sum of squared errors (SSE) to address both visual quality and computer vision performance. Simulations with AVC and HEVC across multiple feature extractors and downstream networks show up to 17% bit-rate savings for the same task accuracy compared to RDO based on SSE, with no decoder complexity overhead and a small encoder complexity increase.
+          </p>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
+
+<!-- Toggle script -->
+<script>
+  const abstractToggle = document.getElementById("abstract-toggle");
+  const abstractContent = document.getElementById("abstract-content");
+
+  abstractToggle.addEventListener("click", () => {
+    abstractContent.style.display = (abstractContent.style.display === "none") ? "block" : "none";
+  });
+</script>
 
 
 <!-- Image carousel -->

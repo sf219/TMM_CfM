@@ -12,13 +12,8 @@ author_profile: true
 ---
 
 ### Overview
-We present **TMM_CfM**, an implementation accompanying  
+Official webpage for our **TMM** paper,  
 [“Image Coding for Machines via Feature-Preserving Rate-Distortion Optimization”](https://arxiv.org/abs/2504.02216).
-
-The repository provides:
-- 🧩 MATLAB & Python code for feature-based RDO
-- 📊 Reproducible experiments for VVC, HEVC, and AVC
-- 🧠 Feature extractors for machine-oriented encoding pipelines
 
 ---
 

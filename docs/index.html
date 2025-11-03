@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TMM_CfM – Image Coding for Machines</title>
+  <meta name="description" content="TMM_CfM: Transfer Matrix Method for Coding for Machines. Feature-preserving rate-distortion optimization for machine vision.">
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="icon" href="static/images/favicon.ico">
+</head>
+<body>
+  <!-- Header -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>TMM_CfM</h1>
+      <h2>Image Coding for Machines via Feature-Preserving Rate-Distortion Optimization</h2>
+      <p>
+        Samuel Fernández-Menduiña · Eduardo Pavez · Antonio Ortega
+      </p>
+      <p>
+        <a href="https://arxiv.org/abs/2504.02216" target="_blank">arXiv:2504.02216</a> ·
+        <a href="https://github.com/sf219/TMM_CfM" target="_blank">GitHub Repository</a>
+      </p>
+    </div>
+  </header>
+
+  <!-- Overview Section -->
+  <section id="overview" class="section">
+    <div class="container">
+      <h2>Overview</h2>
+      <p>
+        TMM_CfM provides an implementation of feature-preserving rate-distortion optimization for image coding intended for machine analysis. 
+        Standard image codecs are optimized for human viewing, but this project focuses on preserving task-relevant features for downstream 
+        vision tasks such as object detection and classification. By linearizing the feature extractor and deriving a block-wise metric (IDSE), 
+        the method integrates efficiently with existing codecs while maintaining decoder compatibility.
+      </p>
+    </div>
+  </section>
+
+  <!-- Abstract Section -->
+  <section id="abstract" class="section">
+    <div class="container">
+      <h2>Abstract</h2>
+      <p>
+        We propose a method for image coding that optimizes compression for machine-based analysis rather than human perception. 
+        The method modifies the rate-distortion optimization (RDO) process to preserve the features that downstream vision models use 
+        for inference. By linearizing the feature extractor, we derive a block-wise distortion metric that closely approximates the 
+        distance between original and decoded features. This allows efficient integration into standard codecs with minimal complexity 
+        increase at the encoder and no changes at the decoder. Experiments using AVC and HEVC show consistent bitrate savings while 
+        maintaining accuracy in representative vision tasks.
+      </p>
+    </div>
+  </section>
+
+  <!-- Code & Resources Section -->
+  <section id="code" class="section bg-light">
+    <div class="container">
+      <h2>Code & Resources</h2>
+      <ul>
+        <li>💻 <a href="https://github.com/sf219/TMM_CfM" target="_blank">GitHub Repository</a> – full implementation and instructions</li>
+        <li>📄 <a href="https://arxiv.org/abs/2504.02216" target="_blank">arXiv Paper</a> – original paper with experiments and derivations</li>
+        <li>📂 <a href="notebooks/" target="_blank">Notebooks</a> – reproducible experiments and demonstrations</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Experiments / Notebooks Section -->
+  <section id="notebooks" class="section">
+    <div class="container">
+      <h2>Experiments & Notebooks</h2>
+      <p>
+        Explore the provided Jupyter notebooks to reproduce the results in the paper:
+      </p>
+      <ul>
+        <li><a href="notebooks/demo.ipynb" target="_blank">Feature-based RDO Demonstration</a></li>
+        <li><a href="notebooks/bd_rate_plots.ipynb" target="_blank">BD-rate Comparison Plots</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Citation Section -->
+  <section id="citation" class="section bg-light">
+    <div class="container">
+      <h2>Citation</h2>
+      <p>
+        If you use this project, please cite:
+      </p>
+      <pre>
+@article{fernandez2025cfm,
+  title     = {Image Coding for Machines via Feature-Preserving Rate-Distortion Optimization},
+  author    = {Fernández-Menduiña, Samuel and Pavez, Eduardo and Ortega, Antonio},
+  journal   = {IEEE Transactions on Multimedia},
+  year      = {2025},
+  note      = {arXiv:2504.02216}
+}
+      </pre>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container" align="center">
+      <p>
+        © 2025 Samuel Fernández-Menduiña · <a href="https://github.com/sf219/TMM_CfM" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

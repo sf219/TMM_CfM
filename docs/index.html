@@ -115,8 +115,58 @@
     /* Overview section boxes */
     .box h3 { color: #1f77b4; }
     .box ul li span { color: #ff7f0e; }
+
+        /* Floating Navigation Bar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
+      z-index: 1000;
+      padding: 0.5rem 1.5rem;
+      font-family: 'Inter', 'Helvetica Neue', sans-serif;
+      display: flex;
+      justify-content: center;
+      backdrop-filter: blur(6px);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .nav-title {
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: #1f77b4; /* tab:blue */
+      text-decoration: none;
+    }
+
+    .nav-links a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #f58220; /* tab:orange */
+    }
+
+    /* Ensure content isn't hidden behind navbar */
+    body {
+      padding-top: 60px;
+    }
+
   </style>
 
+  
   <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
   {
@@ -200,6 +250,20 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
+    <!-- Floating Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#top" class="nav-title">FP-RDO</a>
+      <div class="nav-links">
+        <a href="#at-a-glance">At a glance</a>
+        <a href="#overview">Overview</a>
+        <a href="#results">Results</a>
+        <a href="#contact">Contact</a>
+        <a href="https://github.com/sf219/TMM_CfM" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
   <main id="main-content">
   <section class="hero">
     <div class="hero-body">
@@ -271,7 +335,7 @@
 </section>
 
 <!-- Paper summary -->
-<section class="section hero is-light">
+<section id="at-a-glance" class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -313,7 +377,7 @@
 </script>
 
 <!-- Overview Section -->
-<section class="section has-background-light">
+<section id="overview" class="section has-background-light">
   <div class="container">
     <h2 class="title is-3 has-text-centered tab-orange">Overview</h2>
     <div class="columns is-multiline">
@@ -360,7 +424,7 @@
 </section>
 
 <!-- CfM Setups Section -->
-<section class="section has-background-light">
+<section id="cfm-setup" class="section has-background-light">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered tab-orange">Coding for Machines: Different setups</h2>
     <div class="columns is-multiline is-centered">
@@ -412,7 +476,7 @@
 </section>
 
 <!-- Input-Dependent Squared Error (IDSE) Section -->
-<section class="section has-background-light">
+<section id="idse" class="section has-background-light">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered tab-orange">Input-Dependent Squared Error (IDSE)</h2>
     <div class="content has-text-justified">
@@ -450,7 +514,7 @@
 </section>
 
 <!-- Results Section -->
-<section class="section has-background-light">
+<section id="results" class="section has-background-light">
   <div class="container">
     <h2 class="title is-3 has-text-centered tab-orange">Results</h2>
 

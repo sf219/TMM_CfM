@@ -387,7 +387,7 @@
 
 <!-- Overview Section -->
 <section id="overview" class="section has-background-light">
-  <div class="container">
+  <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered tab-orange">Overview</h2>
     <div class="columns is-multiline">
 
@@ -414,6 +414,7 @@
           <h3 class="title is-4">Key Features</h3>
             <ul>
             <li><span style="color: #1f77b4;">&#10003;</span> Compatible with standard codecs (AVC, HEVC).</li>
+            <li><span style="color: #1f77b4;">&#10003;</span> Simplifies to per-pixel importance during RDO.</li>
             <li><span style="color: #1f77b4;">&#10003;</span> Low additional encoder complexity (~7.86%).</li>
             </ul>         
         </div>
@@ -516,7 +517,7 @@
 
 <!-- Results Section -->
 <section id="results" class="section has-background-tint">
-  <div class="container">
+  <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered tab-orange">Results</h2>
 
     As an example, we study object detection and instance segmentation using Mask R-CNN. Our feature extractor is a FPN with ResNet-50 backbone, pre-trained on MS COCO, which we denote as RPN-FE(50). <br>    
@@ -544,23 +545,21 @@
       </figure>
     </div>
 
-
-
     <!-- Two-column: Runtime Overhead & Lightweight Text -->
     <div class="box columns is-vcentered">
       <div class="column is-half">
         <div class="content has-text-centered">
           <figure>
             <img src="static/images/average_time_comparison.png" alt="Computational Overhead" style="max-width: 75%; height: auto;">
-            <figcaption class="is-size-5" style="margin-top: 0.5em;">
-            </figcaption>
           </figure>
         </div>
       </div>
       <div class="column is-half">
         <div class="content">
           <p>
-              <strong>Computational Overhead:</strong> FP-RDO adds minimal encoder complexity and does not affect the decoder.
+            <strong>Computational Overhead:</strong> FP-RDO adds minimal encoder complexity and does not affect the decoder.<br>
+                <hr style="border: none; border-top: 1px solid #fff; margin: 1em 0;">    
+            In our experiments, the average encoder runtime overhead is approximately <strong>7.9%</strong> compared to standard (SSE-based) rate-distortion optimization.
           </p>
         </div>
       </div>

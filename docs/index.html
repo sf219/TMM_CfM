@@ -96,6 +96,31 @@
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
   
+    <style>
+    /* Matplotlib tab colors */
+    .tab-blue { color: #1f77b4; }
+    .tab-orange { color: #ff7f0e; }
+
+    /* Card titles */
+    .card-title-blue { color: #1f77b4; font-weight: bold; }
+    .card-title-orange { color: #ff7f0e; font-weight: bold; }
+
+    /* Accent buttons */
+    .button.is-link {
+      background-color: #1f77b4;
+      border-color: #1f77b4;
+      color: white;
+    }
+
+    .button.is-link:hover {
+      background-color: #145a86; /* darker shade */
+    }
+
+    /* Overview section boxes */
+    .box h3 { color: #1f77b4; }
+    .box ul li span { color: #ff7f0e; }
+  </style>
+
   <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
   {
@@ -187,7 +212,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Image Coding for Machines via Feature-Preserving RDO</h1>
+            <h1 class="title is-1 tab-blue">Image Coding for Machines via Feature-Preserving RDO</h1>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
@@ -254,7 +279,7 @@
       <div class="column is-four-fifths">
 
         <!-- Always visible "At a Glance" summary -->
-        <h2 class="title is-3">At a glance</h2>
+        <h2 class="title is-3 tab-orange">At a glance</h2>
         <div class="content has-text-justified">
           <p>
             Many images and videos today are primarily processed by computer vision algorithms, with humans inspecting only occasionally. 
@@ -292,12 +317,12 @@
 <!-- Overview Section -->
 <section class="section has-background-light">
   <div class="container">
-    <h2 class="title is-3 has-text-centered">Overview</h2>
+    <h2 class="title is-3 has-text-centered tab-orange">Overview</h2>
     <div class="columns is-multiline">
 
       <div class="column is-half">
         <div class="box">
-          <h3 class="title is-4">Purpose</h3>
+          <h3 class="title is-4 tab-blue">Purpose</h3>
           <p>
             FP-RDO adapts standard codecs to optimize for machine vision tasks by preserving task-relevant features during encoding.
           </p>
@@ -306,7 +331,7 @@
 
       <div class="column is-half">
         <div class="box">
-          <h3 class="title is-4">Approach</h3>
+          <h3 class="title is-4 tab-blue">Approach</h3>
           <p>
             Block-wise approximation of feature distances using input-dependent squared error (IDSE), compatible with existing encoders.
           </p>
@@ -339,12 +364,12 @@
 <!-- Results Section -->
 <section class="section has-background-light">
   <div class="container">
-    <h2 class="title is-3 has-text-centered">Results</h2>
+    <h2 class="title is-3 has-text-centered tab-orange">Results</h2>
     <div class="columns is-multiline is-centered">
       <div class="column is-one-third">
         <div class="card has-text-centered">
           <div class="card-content">
-            <p class="title is-4">Bitrate Savings</p>
+            <p class="title is-4 tab-blue">Bitrate Savings</p>
             <p>Up to 17% reduction in bitrate compared to standard SSE-RDO for the same task accuracy.</p>
           </div>
         </div>
@@ -352,7 +377,7 @@
       <div class="column is-one-third">
         <div class="card has-text-centered">
           <div class="card-content">
-            <p class="title is-4">Encoder Complexity</p>
+            <p class="title is-4 tab-blue">Encoder Complexity</p>
             <p>Minimal increase (~7.86%) in encoder complexity; no decoder changes required.</p>
           </div>
         </div>
@@ -360,7 +385,7 @@
       <div class="column is-one-third">
         <div class="card has-text-centered">
           <div class="card-content">
-            <p class="title is-4">Task Accuracy</p>
+            <p class="title is-4 tab-blue">Task Accuracy</p>
             <p>Maintains the same performance in downstream machine vision tasks.</p>
           </div>
         </div>
@@ -372,7 +397,7 @@
 <!-- Takeaways Section -->
 <section class="section">
   <div class="container">
-    <h2 class="title is-3 has-text-centered">Takeaways</h2>
+    <h2 class="title is-3 has-text-centered tab-orange">Takeaways</h2>
     <div class="columns is-multiline is-centered">
       <div class="column is-half">
         <div class="box">
@@ -423,7 +448,7 @@
 <!-- Contact Section -->
 <section class="section has-background-light">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Contact</h2>
+    <h2 class="title is-3 has-text-centered tab-blue">Contact</h2>
     <div class="columns is-centered">
       <div class="column is-half has-text-centered">
         <p>

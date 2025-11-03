@@ -1,39 +1,48 @@
-# TMM_CfM: Transfer Matrix Method for Coding for Machines
+# Image Coding for Machines via Feature-Preserving Rate-Distortion Optimization (FP-RDO)
 
-Repository for our TMM paper on coding for machines.
+Repository for our paper on **FP-RDO**, presented at **TMM**, enabling feature-preserving compression for machine vision tasks.
 
-## 📚 Documentation
+---
 
-Visit our [project webpage](https://sf219.github.io/TMM_CfM/) for detailed documentation and project information.
+## 📚 Project Documentation
+
+For detailed documentation, tutorials, and project information, visit our [project webpage](https://sf219.github.io/TMM_CfM/).
+
+---
 
 ## 🚀 Quick Start with Colab Notebooks
 
-Get started quickly with our interactive Jupyter notebooks:
+Interact with FP-RDO directly using our Jupyter notebooks in Google Colab:
 
-### 1. Introduction to TMM_CfM
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sf219/TMM_CfM/blob/main/notebooks/01_introduction.ipynb)
+### 1️⃣ Introduction to FP-RDO
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sf219/TMM_CfM/blob/main/notebooks/01_introduction.ipynb)  
 
-Learn the basics of the Transfer Matrix Method and how to use TMM_CfM.
+Learn the basics of **Feature-Preserving Rate-Distortion Optimization** and how FP-RDO works.
 
-### 2. Usage Examples
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sf219/TMM_CfM/blob/main/notebooks/02_usage_examples.ipynb)
+### 2️⃣ Usage Examples
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sf219/TMM_CfM/blob/main/notebooks/02_usage_examples.ipynb)  
 
-Explore advanced applications including optical systems, coding chains, and ML integration.
+Explore practical applications, including codec integration, machine analysis pipelines, and performance evaluation.
 
-## 📖 About
+---
 
-The Transfer Matrix Method (TMM) is a powerful mathematical technique for analyzing systems composed of multiple layers or stages. This project applies TMM to coding for machines, providing:
+## 📖 About FP-RDO
 
-- Efficient computational methods
-- Machine-readable code structures
-- Integration with ML workflows
-- Practical examples and tutorials
+**FP-RDO** is a method for compressing images and videos while preserving features critical for downstream machine vision tasks.  
+Key aspects of FP-RDO:
+
+- Optimizes standard codecs (AVC, HEVC) for machine tasks  
+- Maintains downstream task accuracy with minimal encoder overhead  
+- Integrates efficiently with ML workflows  
+- Supports block-wise computation using input-dependent squared error (IDSE)  
+
+---
 
 ## 🗂️ Repository Structure
 
-```
+```text
 TMM_CfM/
-├── docs/              # Project documentation and webpage
+├── docs/              # Project documentation and website
 │   ├── index.md       # Main documentation page
 │   └── _config.yml    # GitHub Pages configuration
 ├── notebooks/         # Interactive Jupyter/Colab notebooks
@@ -41,7 +50,7 @@ TMM_CfM/
 │   ├── 02_usage_examples.ipynb
 │   └── README.md
 └── README.md          # This file
-```
+
 
 ## 💻 Installation
 

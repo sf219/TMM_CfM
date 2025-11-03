@@ -32,9 +32,9 @@ Explore practical applications, including codec integration, machine analysis pi
 Key aspects of FP-RDO:
 
 - Optimizes standard codecs (AVC, HEVC) for machine tasks  
+- Supports block-wise computation via input-dependent squared error (IDSE)  
 - Maintains downstream task accuracy with minimal encoder overhead  
-- Integrates efficiently with ML workflows  
-- Supports block-wise computation using input-dependent squared error (IDSE)  
+- Standard-compliant
 
 ---
 
@@ -52,17 +52,6 @@ TMM_CfM/
 └── README.md          # This file
 
 
-## 💻 Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/sf219/TMM_CfM.git
-cd TMM_CfM
-
-# Install dependencies for running examples
-pip install numpy scipy matplotlib scikit-learn
-```
-
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to:
@@ -77,4 +66,4 @@ See the LICENSE file for details.
 
 ## 📧 Contact
 
-For questions or collaboration opportunities, please open an issue on GitHub.
+For questions or collaboration opportunities, please open an issue on GitHub or reach out to samuelf9@usc.edu.

@@ -1,34 +1,40 @@
 title: TMM_CfM
 description: Transfer Matrix Method for Coding for Machines
-theme: jekyll-theme-cayman
-markdown: kramdown
+theme: minimal-mistakes-jekyll
 
-# GitHub Pages configuration
-baseurl: "/TMM_CfM"
 url: "https://sf219.github.io"
+baseurl: "/TMM_CfM"
 
-# Navigation bar (top of page)
+# Author info (for header/footer)
+author:
+  name: "Samuel Fernández-Menduiña"
+  avatar: "/assets/img/avatar.png" # optional
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/sf219/TMM_CfM"
+    - label: "arXiv"
+      icon: "fas fa-file-alt"
+      url: "https://arxiv.org/abs/2504.02216"
+
+# Navigation (top bar)
 navigation:
-  - title: Home
+  - title: "Home"
     url: /
-  - title: Paper
+  - title: "Paper"
     url: /paper/
-  - title: Notebooks
+  - title: "Notebooks"
     url: /notebooks/
-  - title: GitHub
+  - title: "GitHub"
     url: https://github.com/sf219/TMM_CfM
 
-# Plugins for relative linking and markdown notebooks
+# Plugins
 plugins:
-  - jekyll-relative-links
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-include-cache
 
-relative_links:
-  enabled: true
-  collections: true
-
-# Allow rendering of Jupyter notebooks and local markdown
-include:
-  - _*.ipynb
-  - _*.md
-  - notebooks/
-  - paper/
+# Optional extras
+markdown: kramdown
+paginate: 5
+paginate_path: "/page:num/"

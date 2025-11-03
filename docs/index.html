@@ -26,10 +26,6 @@
   <meta name="description" content="We propose a novel approach to image coding for machines that optimizes rate-distortion performance while preserving critical features for machine analysis tasks. Our method leverages feature-preserving rate-distortion optimization to achieve superior compression efficiency without compromising the accuracy of downstream machine learning applications. Experimental results demonstrate significant improvements over traditional coding techniques, highlighting the potential of our approach in real-world scenarios.">
   <!-- TODO: Replace with your actual website URL -->
   <meta property="og:url" content="https://sf219.github.io/">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Image Coding for Machines via Feature-Preserving Rate-Distortion Optimization">
   <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
   <meta property="article:author" content="Samuel Fernández">
@@ -160,7 +156,6 @@
       "name": "IEEE Transactions on Multimedia",
     },
     "url": "https://sf219.github.io/TMM_CfM",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
     "keywords": ["Coding for machines", "Remote inference", "Jacobian", "machine learning", "computer vision"],
     "abstract": "Many images and videos are primarily processed by computer vision algorithms, involving only occasional hu- man inspection. When this content requires compression before processing, e.g., in distributed applications, coding methods must optimize for both visual quality and downstream task performance. We first show theoretically that an approach to reduce the effect of compression for a given task loss is to perform rate-distortion optimization (RDO) using the distance between features, obtained from the original and the decoded images, as a distortion metric. However, optimizing directly such a rate- distortion objective is computationally impractical because it requires iteratively encoding and decoding the entire image–plus feature evaluation–for each possible coding configuration. We address this problem by simplifying the RDO formulation to make the distortion term computable using block-based encoders. We first apply Taylor’s expansion to the feature extractor, recasting the feature distance as a quadratic metric involving the Jacobian matrix of the neural network. Then, we replace the linearized metric with a block-wise approximation, which we call input-dependent squared error (IDSE). To make the metric computable, we approximate IDSE using sketches of the Jacobian. The resulting loss can be evaluated block-wise in the transform domain and combined with the sum of squared errors (SSE) to address both visual quality and computer vision performance. Simulations with AVC and HEVC across multiple feature extractors and downstream networks show up to 17% bit-rate savings for the same task accuracy compared to RDO based on SSE, with no decoder complexity overhead and a small (7.86%) encoder complexity increase.",
     "citation": "@article{fernandez2025image,  title={Image Coding for Machines via Feature-Preserving Rate-Distortion Optimization},  author={Samuel Fernández Menduiña, Eduardo Pavez, Antonio Ortega},  journal={IEEE Transactions on Multimedia},  year={2025},  url=https://sf219.github.io/TMM_CfM/}",
@@ -189,7 +184,7 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "University of Southern California",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
+    "url": "https://usc.edu",
     "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
     "sameAs": [
       "https://github.com/sf219"
@@ -222,14 +217,15 @@
                   </span>
                   </div>
 
-                  <div class="is-size-5 publication-authors">
+                  <div class="is-size-5 publication2-authors">
                     <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block tab-orange">University of Southern California</span>
-                      <a href="https://ieeexplore.ieee.org/xpl/topAccessedArticles.jsp?punumber=6046" target="_blank" class="tab-blue">IEEE Transactions on Multimedia, 2025</a>
-                        <span class="icon">
-                          <i class="fas fa-external-link-alt"></i>
-                        </span>                    
+                    <span class="author-block tab-orange"><b>University of Southern California</b></span>
                   </div>
+                  <div class="is-size-5 publication2-authors">
+                    <span class="author-block">
+                      <a href="https://ieeexplore.ieee.org/xpl/topAccessedArticles.jsp?punumber=6046" target="_blank" class="tab-blue">IEEE Transactions on Multimedia, 2025</a>
+                    </span>
+                    </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
@@ -326,7 +322,7 @@
         <div class="box">
           <h3 class="title is-4 tab-blue">Purpose</h3>
           <p>
-            FP-RDO adapts standard codecs to optimize for machine vision tasks by preserving task-relevant features during encoding.
+            FP-RDO adapts standard codecs for remote inference by optimizing for machine vision tasks by preserving task-relevant features during encoding.
           </p>
         </div>
       </div>
@@ -363,68 +359,151 @@
   </div>
 </section>
 
+<!-- CfM Setups Section -->
+<section class="section has-background-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered tab-orange">Coding for Machines: Different setups</h2>
+    <div class="columns is-multiline is-centered">
+
+      <!-- Setup 1 Image and Description -->
+      <div class="column is-half has-text-centered">
+        <figure>
+          <img src="static/images/image_not_transmitted.png" alt="CfM Setup 1" style="max-width: 100%; height: auto;">
+          <figcaption class="is-size-5" style="margin-top: 0.5em;">
+            <strong>Setup 1: Image transmission not needed</strong>
+          </figcaption>
+        </figure>
+        <p class="content has-text-justified" style="margin-top: 1em;">
+          Compressing the original content is unnecessary since it is not transmitted. 
+          <ul style="text-align:left;">
+            <li>
+              <strong>For a single task:</strong> Local inference (running the model at the transmitter and sending only the results) is optimal.
+            </li>
+
+            <li>
+              <strong>For multiple tasks sharing the same features:</strong> Compressing and transmitting the common features (FCM) is more efficient.
+            </li>
+          </ul>        
+        </p>
+      </div>
+
+      <!-- Setup 2 Image and Description -->
+      <div class="column is-half has-text-centered">
+        <figure>
+          <img src="static/images/image_transmitted.png" alt="CfM Setup 2" style="max-width: 100%; height: auto;">
+          <figcaption class="is-size-5" style="margin-top: 0.5em;">
+            <strong>Setup 2: Image transmission needed (ours)</strong>
+          </figcaption>
+        </figure>
+        <p class="content has-text-justified" style="margin-top: 1em;">
+          Content must be transmitted for potential human viewing, in addition to machine analysis. 
+          <ul style="text-align:left;">
+            <li>
+              <strong>For a single task:</strong> Compress the image preserving task-relevant features using our setup.
+            </li>
+            <li>
+              <strong>For multiple tasks sharing the same features:</strong> Compress the image preserving common features using our setup.
+            </li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Input-Dependent Squared Error (IDSE) Section -->
+<section class="section has-background-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered tab-orange">Input-Dependent Squared Error (IDSE)</h2>
+    <div class="content has-text-justified">
+      <p>
+        The core idea behind FP-RDO is to minimize the <strong>feature distance</strong> between the original and compressed images, ensuring that machine-relevant features are preserved for downstream tasks.
+      </p>
+    </div>
+
+    <!-- First image and explanation -->
+    <div class="has-text-centered" style="margin-bottom:2em;">
+      <figure>
+        <img src="static/images/taylor_expansion_v4.png" alt="Taylor Expansion of Feature Distance" style="max-width: 75%; height: auto;">
+        <figcaption class="is-size-5" style="margin-top: 0.5em;">
+          <strong>Taylor Expansion of Feature Distance</strong>
+        </figcaption>
+      </figure>
+      <p class="content has-text-justified" style="margin-top: 1em;">
+        By applying a Taylor expansion to the feature extractor, the feature distance can be approximated as a quadratic form involving the Jacobian of the neural network. This linearization makes the metric tractable for optimization.
+      </p>
+    </div>
+
+    <!-- Second image and explanation -->
+    <div class="has-text-centered">
+      <figure>
+        <img src="static/images/sketches_TMM.png" alt="Blockwise Computation of IDSE" style="max-width: 100%; height: auto;">
+        <figcaption class="is-size-5" style="margin-top: 0.5em;">
+          <strong>Blockwise Computation of IDSE</strong>
+        </figcaption>
+      </figure>
+      <p class="content has-text-justified" style="margin-top: 1em;">
+        The resulting <strong>Input-Dependent Squared Error (IDSE)</strong> can be computed blockwise, allowing integration with standard block-based codecs. This enables efficient rate-distortion optimization that preserves features critical for machine analysis, without requiring changes to the decoder.
+      </p>
+    </div>
+  </div>
+</section>
+
 <!-- Results Section -->
 <section class="section has-background-light">
   <div class="container">
     <h2 class="title is-3 has-text-centered tab-orange">Results</h2>
-    <div class="columns is-multiline is-centered">
-      <div class="column is-one-third">
-        <div class="card has-text-centered">
-          <div class="card-content">
-            <p class="title is-4 tab-blue">Bitrate Savings</p>
-            <p>Up to 17% reduction in bitrate compared to standard SSE-RDO for the same task accuracy.</p>
-          </div>
+
+    As an example, we study object detection and instance segmentation using Mask R-CNN. Our feature extractor is a FPN with ResNet-50 backbone, pre-trained on MS COCO, which we denote as RPN-FE(50).
+    
+    <br>
+
+    <!-- Importance Map Example -->
+    <div class="box has-text-centered" style="margin-bottom:2em;">
+      <figure>
+        <img src="static/images/dQP_importance_map_269113.png" alt="Importance Map and Bit Allocations" style="max-width: 75%; height: auto;">
+        <figcaption class="is-size-5" style="margin-top: 0.5em;">
+          <strong>Example: Importance map and block-wise quantization step variation for FP-RDO</strong>
+        </figcaption>
+      </figure>
+      <p class="content has-text-justified" style="margin-top: 1em;">
+        FP-RDO allocates bits according to feature importance, preserving regions critical for downstream tasks.
+      </p>
+    </div>
+
+    <!-- BD-Rate Results Figure -->
+    <div class="box has-text-centered" style="margin-bottom:2em;">
+      <figure>
+        <img src="static/images/merger.png" alt="BD-Rate Results" style="max-width: 75%; height: auto;">
+        <figcaption class="is-size-5" style="margin-top: 0.5em;">
+          <strong>Rate-distortion curves:</strong> Up to <strong>17% reduction in bitrate</strong> compared to standard SSE-RDO for the same task accuracy across multiple datasets and codecs.
+        </figcaption>
+      </figure>
+    </div>
+
+
+
+    <!-- Two-column: Runtime Overhead & Lightweight Text -->
+    <div class="box columns is-vcentered">
+      <div class="column is-half">
+        <div class="content has-text-centered">
+          <figure>
+            <img src="static/images/average_time_comparison.png" alt="Computational Overhead" style="max-width: 75%; height: auto;">
+            <figcaption class="is-size-5" style="margin-top: 0.5em;">
+            </figcaption>
+          </figure>
         </div>
       </div>
-      <div class="column is-one-third">
-        <div class="card has-text-centered">
-          <div class="card-content">
-            <p class="title is-4 tab-blue">Encoder Complexity</p>
-            <p>Minimal increase (~7.86%) in encoder complexity; no decoder changes required.</p>
-          </div>
-        </div>
-      </div>
-      <div class="column is-one-third">
-        <div class="card has-text-centered">
-          <div class="card-content">
-            <p class="title is-4 tab-blue">Task Accuracy</p>
-            <p>Maintains the same performance in downstream machine vision tasks.</p>
-          </div>
+      <div class="column is-half">
+        <div class="content">
+          <p>
+              <strong>Computational Overhead:</strong> FP-RDO adds minimal encoder complexity and does not affect the decoder.
+          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- Takeaways Section -->
-<section class="section">
-  <div class="container">
-    <h2 class="title is-3 has-text-centered tab-orange">Takeaways</h2>
-    <div class="columns is-multiline is-centered">
-      <div class="column is-half">
-        <div class="box">
-          <li><span style="color: #1f77b4;">&#10003;</span> Rate-distortion optimization can be adapted for machine vision without changing the decoder.</li>
-        </div>
-      </div>
-      <div class="column is-half">
-        <div class="box">
-          <li><span style="color: #1f77b4;">&#10003;</span> Block-wise feature-preserving metrics like IDSE make computation practical for real codecs.</li>
-        </div>
-      </div>
-      <div class="column is-half">
-        <div class="box">
-          <li><span style="color: #1f77b4;">&#10003;</span> Experimental results show significant bitrate savings with minimal overhead.</li>
-        </div>
-      </div>
-      <div class="column is-half">
-        <div class="box">
-          <li><span style="color: #1f77b4;">&#10003;</span> Useful in distributed vision systems, IoT devices, or any scenario where machines process the content.</li>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">

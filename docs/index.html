@@ -454,20 +454,16 @@
   <div class="container">
     <h2 class="title is-3 has-text-centered tab-orange">Results</h2>
 
-    As an example, we study object detection and instance segmentation using Mask R-CNN. Our feature extractor is a FPN with ResNet-50 backbone, pre-trained on MS COCO, which we denote as RPN-FE(50).
+    As an example, we study object detection and instance segmentation using Mask R-CNN. Our feature extractor is a FPN with ResNet-50 backbone, pre-trained on MS COCO, which we denote as RPN-FE(50)<br>.
     
-    <br>
-
     <!-- Importance Map Example -->
     <div class="box has-text-centered" style="margin-bottom:2em;">
       <figure>
         <img src="static/images/dQP_importance_map_269113.png" alt="Importance Map and Bit Allocations" style="max-width: 75%; height: auto;">
-        <figcaption class="is-size-5" style="margin-top: 0.5em;">
-          <strong>Example: Importance map and block-wise quantization step variation for FP-RDO</strong>
-        </figcaption>
       </figure>
       <p class="content has-text-justified" style="margin-top: 1em;">
-        FP-RDO allocates bits according to feature importance, preserving regions critical for downstream tasks.
+        <strong>Importance map and block-wise quantization step variation.
+        </strong> IDSE defines a per-pixel importance map for feature preservation. FP-RDO allocates bits according to this feature importance, preserving regions critical for downstream tasks.
       </p>
     </div>
 
@@ -475,9 +471,9 @@
     <div class="box has-text-centered" style="margin-bottom:2em;">
       <figure>
         <img src="static/images/merger.png" alt="BD-Rate Results" style="max-width: 75%; height: auto;">
-        <figcaption class="is-size-5" style="margin-top: 0.5em;">
+        <p class="content has-text-justified" style="margin-top: 1em;">      
           <strong>Rate-distortion curves:</strong> Up to <strong>17% reduction in bitrate</strong> compared to standard SSE-RDO for the same task accuracy across multiple datasets and codecs.
-        </figcaption>
+        </p>
       </figure>
     </div>
 

@@ -101,50 +101,58 @@
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "headline": "Image Coding for Machines via Feature-Preserving Rate-Distortion Optimization",
+    "description": "We propose a novel approach to image coding for machines that optimizes rate-distortion performance while preserving critical features for machine analysis tasks. Our method leverages feature-preserving rate-distortion optimization to achieve superior compression efficiency without compromising the accuracy of downstream machine learning applications. Experimental results demonstrate significant improvements over traditional coding techniques, highlighting the potential of our approach in real-world scenarios.",
     "author": [
       {
         "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
+        "name": "Samuel Fernández Menduiña",
         "affiliation": {
           "@type": "Organization",
-          "name": "INSTITUTION_NAME"
+          "name": "University of Southern California"
         }
       },
       {
         "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
+        "name": "Eduardo Pavez",
         "affiliation": {
           "@type": "Organization",
-          "name": "INSTITUTION_NAME"
+          "name": "University of Southern California"
+        }
+      }
+      {
+        "@type": "Person",
+        "name": "Antonio Ortega",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "University of Southern California"
         }
       }
     ],
-    "datePublished": "2024-01-01",
+    "datePublished": "2025-11-02",
     "publisher": {
       "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
+      "name": "IEEE Transactions on Multimedia",
     },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
+    "url": "https://sf219.github.io/TMM_CfM",
     "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
+    "keywords": ["Coding for machines", "Remote inference", "Jacobian", "machine learning", "computer vision"],
+    "abstract": "Many images and videos are primarily processed by computer vision algorithms, involving only occasional hu- man inspection. When this content requires compression before processing, e.g., in distributed applications, coding methods must optimize for both visual quality and downstream task performance. We first show theoretically that an approach to reduce the effect of compression for a given task loss is to perform rate-distortion optimization (RDO) using the distance between features, obtained from the original and the decoded images, as a distortion metric. However, optimizing directly such a rate- distortion objective is computationally impractical because it requires iteratively encoding and decoding the entire image–plus feature evaluation–for each possible coding configuration. We address this problem by simplifying the RDO formulation to make the distortion term computable using block-based encoders. We first apply Taylor’s expansion to the feature extractor, recasting the feature distance as a quadratic metric involving the Jacobian matrix of the neural network. Then, we replace the linearized metric with a block-wise approximation, which we call input-dependent squared error (IDSE). To make the metric computable, we approximate IDSE using sketches of the Jacobian. The resulting loss can be evaluated block-wise in the transform domain and combined with the sum of squared errors (SSE) to address both visual quality and computer vision performance. Simulations with AVC and HEVC across multiple feature extractors and downstream networks show up to 17% bit-rate savings for the same task accuracy compared to RDO based on SSE, with no decoder complexity overhead and a small (7.86%) encoder complexity increase.",
+    "citation": "@article{fernandez2025image,  title={Image Coding for Machines via Feature-Preserving Rate-Distortion Optimization},  author={Samuel Fernández Menduiña, Eduardo Pavez, Antonio Ortega},  journal={IEEE Transactions on Multimedia},  year={2025},  url=https://sf219.github.io/TMM_CfM/}",
     "isAccessibleForFree": true,
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "mainEntity": {
       "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
+      "@id": "https://sf219.github.io/TMM_CfM"
     },
     "about": [
       {
         "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
+        "name": "Image Coding for Machines"
       },
       {
         "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
+        "name": "Computer vision"
       }
     ]
   }
@@ -155,12 +163,11 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
+    "name": "University of Southern California",
     "url": "https://YOUR_INSTITUTION_WEBSITE.com",
     "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
     "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
+      "https://github.com/sf219"
     ]
   }
   </script>
@@ -180,30 +187,28 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Image Coding for Machines via Feature-Preserving Rate-Distortion Optimization</h1>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://sf219.github.io" target="_blank">Samuel Fernández Menduiña</a><sup>*</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Eduardo Pavez</a><sup>*</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Antonio Ortega</a>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
                     <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">University of Southern California<br>IEEE Transactions on Multimedia, 2025</span>
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- TODO: Update with your arXiv paper ID -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://https://arxiv.org/pdf/2504.02216.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -212,20 +217,9 @@
                       </a>
                     </span>
 
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
                   <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/sf219" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -233,17 +227,6 @@
                     <span>Code</span>
                   </a>
                 </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
             </div>
           </div>
         </div>
@@ -261,8 +244,7 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
+            Many images and videos are primarily processed by computer vision algorithms, involving only occasional hu- man inspection. When this content requires compression before processing, e.g., in distributed applications, coding methods must optimize for both visual quality and downstream task performance. We first show theoretically that an approach to reduce the effect of compression for a given task loss is to perform rate-distortion optimization (RDO) using the distance between features, obtained from the original and the decoded images, as a distortion metric. However, optimizing directly such a rate- distortion objective is computationally impractical because it requires iteratively encoding and decoding the entire image–plus feature evaluation–for each possible coding configuration. We address this problem by simplifying the RDO formulation to make the distortion term computable using block-based encoders. We first apply Taylor’s expansion to the feature extractor, recasting the feature distance as a quadratic metric involving the Jacobian matrix of the neural network. Then, we replace the linearized metric with a block-wise approximation, which we call input-dependent squared error (IDSE). To make the metric computable, we approximate IDSE using sketches of the Jacobian. The resulting loss can be evaluated block-wise in the transform domain and combined with the sum of squared errors (SSE) to address both visual quality and computer vision performance. Simulations with AVC and HEVC across multiple feature extractors and downstream networks show up to 17% bit-rate savings for the same task accuracy compared to RDO based on SSE, with no decoder complexity overhead and a small (7.86%) encoder complexity increase.          </p>
         </div>
       </div>
     </div>
@@ -337,7 +319,7 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
+      <pre id="bibtex-code"><code>@article{fernandez2025image,
   title={Image Coding for Machines via Feature-Preserving Rate-Distortion Optimization},
   author={Samuel Fernández Menduiña, Eduardo Pavez, Antonio Ortega},
   journal={IEEE Transactions on Multimedia},

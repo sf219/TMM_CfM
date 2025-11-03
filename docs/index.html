@@ -270,7 +270,7 @@
         <!-- Hidden full abstract -->
         <div class="content has-text-justified" id="abstract-content" style="display:none; margin-top: 1em;">
           <p>
-                        Many images and videos today are primarily processed by computer vision algorithms, with humans inspecting only occasionally. When this content requires compression before processing, e.g., in distributed applications, coding methods must optimize for both visual quality and downstream task performance. We first show theoretically that an approach to reduce the effect of compression for a given task loss is to perform rate-distortion optimization (RDO) using the distance between features, obtained from the original and the decoded images, as a distortion metric. Optimizing directly such a rate-distortion objective is computationally impractical because it requires iteratively encoding and decoding the entire image plus feature evaluation for each possible coding configuration. We address this problem by simplifying the RDO formulation to make the distortion term computable using block-based encoders. We apply Taylor’s expansion to the feature extractor, recasting the feature distance as a quadratic metric involving the Jacobian matrix of the neural network. Then, we replace the linearized metric with a block-wise approximation, called input-dependent squared error (IDSE). To make the metric computable, we approximate IDSE using sketches of the Jacobian. The resulting loss can be evaluated block-wise in the transform domain and combined with the sum of squared errors (SSE) to address both visual quality and computer vision performance. Simulations with AVC and HEVC across multiple feature extractors and downstream networks show up to 17% bit-rate savings for the same task accuracy compared to RDO based on SSE, with no decoder complexity overhead and a small encoder complexity increase.
+                Many images and videos today are primarily processed by computer vision algorithms, with humans inspecting only occasionally. When this content requires compression before processing, e.g., in distributed applications, coding methods must optimize for both visual quality and downstream task performance. We first show theoretically that an approach to reduce the effect of compression for a given task loss is to perform rate-distortion optimization (RDO) using the distance between features, obtained from the original and the decoded images, as a distortion metric. Optimizing directly such a rate-distortion objective is computationally impractical because it requires iteratively encoding and decoding the entire image plus feature evaluation for each possible coding configuration. We address this problem by simplifying the RDO formulation to make the distortion term computable using block-based encoders. We apply Taylor’s expansion to the feature extractor, recasting the feature distance as a quadratic metric involving the Jacobian matrix of the neural network. Then, we replace the linearized metric with a block-wise approximation, called input-dependent squared error (IDSE). To make the metric computable, we approximate IDSE using sketches of the Jacobian. The resulting loss can be evaluated block-wise in the transform domain and combined with the sum of squared errors (SSE) to address both visual quality and computer vision performance. Simulations with AVC and HEVC across multiple feature extractors and downstream networks show up to 17% bit-rate savings for the same task accuracy compared to RDO based on SSE, with no decoder complexity overhead and a small encoder complexity increase.
           </p>
         </div>
 
@@ -289,46 +289,108 @@
   });
 </script>
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+<!-- Overview Section -->
+<section class="section has-background-light">
+  <div class="container">
+    <h2 class="title is-3 has-text-centered">Overview</h2>
+    <div class="columns is-multiline">
+      <div class="column is-half">
+        <div class="box">
+          <h3 class="title is-4">Purpose</h3>
+          <p>
+            TMM_CfM adapts standard codecs to optimize for machine vision tasks by preserving task-relevant features during compression.
+          </p>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
+      <div class="column is-half">
+        <div class="box">
+          <h3 class="title is-4">Approach</h3>
+          <p>
+            Block-wise approximation of feature distances using input-dependent squared error (IDSE), compatible with existing encoders.
+          </p>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
+      <div class="column is-half">
+        <div class="box">
+          <h3 class="title is-4">Results</h3>
+          <p>
+            Experiments show up to 17% bitrate savings for the same task accuracy compared to standard SSE-RDO, with minimal encoder overhead.
+          </p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="box">
+          <h3 class="title is-4">Applications</h3>
+          <p>
+            Useful for distributed vision systems, IoT devices, or any application where machine analysis dominates human viewing.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
+
+<!-- Results Section -->
+<section class="section has-background-light">
+  <div class="container">
+    <h2 class="title is-3 has-text-centered">Results</h2>
+    <div class="columns is-multiline is-centered">
+      <div class="column is-one-third">
+        <div class="card has-text-centered">
+          <div class="card-content">
+            <p class="title is-4">Bitrate Savings</p>
+            <p>Up to 17% reduction in bitrate compared to standard SSE-RDO for the same task accuracy.</p>
+          </div>
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="card has-text-centered">
+          <div class="card-content">
+            <p class="title is-4">Encoder Complexity</p>
+            <p>Minimal increase (~7.86%) in encoder complexity; no decoder changes required.</p>
+          </div>
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="card has-text-centered">
+          <div class="card-content">
+            <p class="title is-4">Task Accuracy</p>
+            <p>Maintains the same performance in downstream machine vision tasks.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Takeaways Section -->
+<section class="section">
+  <div class="container">
+    <h2 class="title is-3 has-text-centered">Takeaways</h2>
+    <div class="columns is-multiline is-centered">
+      <div class="column is-half">
+        <div class="box">
+          <p>✅ Rate-distortion optimization can be adapted for machine vision without changing the decoder.</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="box">
+          <p>✅ Block-wise feature-preserving metrics like IDSE make computation practical for real codecs.</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="box">
+          <p>✅ Experimental results show significant bitrate savings with minimal overhead.</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="box">
+          <p>✅ Useful in distributed vision systems, IoT devices, or any scenario where machines process the content.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">

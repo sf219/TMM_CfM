@@ -1,8 +1,8 @@
 /* Modern CSS Variables for consistent theming */
 :root {
-  --primary-color: #2563eb;
+  --primary-color: #1f77b4;
   --primary-hover: #1d4ed8;
-  --secondary-color: #64748b;
+  --secondary-color: #ff7f0e;
   --accent-color: #0ea5e9;
   --text-primary: #1e293b;
   --text-secondary: #64748b;
